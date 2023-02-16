@@ -1,0 +1,22 @@
+/* Created a database of a liquor store's alcohol inventory */
+
+CREATE TABLE liquor (id INTEGER PRIMARY KEY, brand TEXT, inventory INTEGER, alcohol TEXT, category TEXT); 
+
+INSERT INTO liquor VALUES (1, "Hennessy", 3, "Brandy", "Spirit");
+INSERT INTO liquor VALUES (2, "Ferrand", 2, "Cognac", "Spirit"); 
+INSERT INTO liquor VALUES (3, "Creek", 2, "Cognac", "Spirit");
+INSERT INTO liquor VALUES (4, "Monte", 4, "Pisco", "Spirit");
+INSERT INTO liquor VALUES (5, "Hendrick's", 3, "Gin", "Spirit"); 
+INSERT INTO liquor VALUES (6, "Tanquery", 2, "Gin", "Spirit"); 
+INSERT INTO liquor VALUES (7, "Bacardi", 4, "Rum", "Spirit"); 
+INSERT INTO liquor VALUES (8, "Morgan", 3, "Rum", "Spirit"); 
+INSERT INTO liquor VALUES (9, "Espolon", 3, "Tequila", "Spirit");
+INSERT INTO liquor VALUES (10, "Casamigos", 2, "Tequila", "Spirit"); 
+INSERT INTO liquor VALUES (11, "Lodo", 1, "Mezcal", "Spirit"); 
+INSERT INTO liquor VALUES (12, "Tito's", 2, "Vodka", "Spirit"); 
+INSERT INTO liquor VALUES (13, "Encore", 2, "Pinot Noir", "Wine"); 
+INSERT INTO liquor VALUES (14, "Phigment", 4, "Cabernet", "Wine");
+INSERT INTO liquor VALUES (15, "Unruly", 3, "Red Blend", "Wine"); 
+
+SELECT * FROM liquor;
+SELECT category, SUM(inventory) FROM liquor GROUP BY category;
