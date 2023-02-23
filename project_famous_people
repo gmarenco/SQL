@@ -1,0 +1,36 @@
+/* Create a table about how famous they are */
+
+CREATE TABLE animation (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    created INTEGER,
+    company TEXT);
+    
+INSERT INTO animation (fullname, created, company) VALUES ("Mickey Mouse", 1928, "Disney");
+INSERT INTO animation (fullname, created, company) VALUES ("Bugs Bunny", 1940, "Looney Tunes");
+INSERT INTO animation (fullname, created, company) VALUES ("Fred Flintstone", 1960, "ABC");
+INSERT INTO animation (fullname, created, company) VALUES ("Snoopy", 1950, "Peanuts");
+INSERT INTO animation (fullname, created, company) VALUES ("Pink Panther", 1963, "WB");
+INSERT INTO animation (fullname, created, company) VALUES ("Stewie Griffin", 1998, "Fox");
+INSERT INTO animation (fullname, created, company) VALUES ("Tina Belcher", 2011, "Fox");
+
+
+CREATE table acclaim (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    animation_id INTEGER,
+    popularity TEXT);
+    
+INSERT INTO acclaim (animation_id, popularity) VALUES (1, "Worldwide");
+INSERT INTO acclaim (animation_id, popularity) VALUES (2, "Worldwide");
+INSERT INTO acclaim (animation_id, popularity) VALUES (3, "Worldwide");
+INSERT INTO acclaim (animation_id, popularity) VALUES (4, "Worldwide");
+INSERT INTO acclaim (animation_id, popularity) VALUES (5, "Worldwide");
+INSERT INTO acclaim (animation_id, popularity) VALUES (6, "Domestic");
+INSERT INTO acclaim (animation_id, popularity) VALUES (7, "Domestic");
+
+/* return total acclaim for each animation */
+
+SELECT a.fullname, b.popularity
+FROM animation a
+JOIN acclaim b
+ON a.id = b.animation_id;
