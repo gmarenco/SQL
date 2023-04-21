@@ -1,4 +1,4 @@
-/* Create a table about how famous they are */
+--For this project, I created a table for actors and related tables, joining these relations to produce distinct records that were used to answer queries.
 
 CREATE TABLE animation (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -28,7 +28,7 @@ INSERT INTO acclaim (animation_id, popularity) VALUES (5, "Worldwide");
 INSERT INTO acclaim (animation_id, popularity) VALUES (6, "Domestic");
 INSERT INTO acclaim (animation_id, popularity) VALUES (7, "Domestic");
 
-/* return total acclaim for each animation */
+--I returned total acclaim for each animation
 
 SELECT a.fullname, b.popularity
 FROM animation a
