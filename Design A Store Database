@@ -1,4 +1,4 @@
-/* Created a database of a liquor store's alcohol inventory */
+--Created a database of a liquor store and inserted data description of inventory. 
 
 CREATE TABLE liquor (id INTEGER PRIMARY KEY, brand TEXT, inventory INTEGER, alcohol TEXT, category TEXT); 
 
